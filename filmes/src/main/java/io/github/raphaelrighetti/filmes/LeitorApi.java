@@ -1,10 +1,13 @@
 package io.github.raphaelrighetti.filmes;
 
+import io.github.raphaelrighetti.filmes.regex.JsonMatcher;
+
 import java.io.*;
 import java.net.URI;
 import java.net.http.HttpClient;
 import java.net.http.HttpRequest;
 import java.net.http.HttpResponse;
+import java.util.List;
 import java.util.Properties;
 
 public class LeitorApi {
@@ -26,6 +29,13 @@ public class LeitorApi {
         try {
             HttpResponse<String> response = client.send(request, HttpResponse.BodyHandlers.ofString());
             System.out.println(response.body());
+            JsonMatcher jsonMatcher = new JsonMatcher(response.body());
+            jsonMatcher.getFilmes().forEach(System.out::println);
+            List<String> ranks = jsonMatcher.getRanks();
+            for (int i = 0; i < ranks.size(); i++) {
+                System.out.println(ranks.get(i) + ", " + i);
+
+            }
         } catch (Exception e) {
             e.printStackTrace();
         }
