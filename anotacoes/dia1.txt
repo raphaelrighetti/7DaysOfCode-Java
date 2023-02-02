@@ -1,0 +1,1 @@
+Achei muito insteressante o jeito de fazer requisições a APIs no Java 11, muito intuitivo e interessante de usar, pois usa o padrão de projeto "Builder", um padrão que não tinha tido tanto contato até agora.

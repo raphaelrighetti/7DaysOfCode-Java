@@ -1,0 +1,3 @@
+Nesse desafio pude aprender muita coisa sobre regex no Java, pois foi dito para não usarmos nenhuma biblioteca que facilita o tratamento de dados JSON, apenas usar os métodos de String e regex, usando as classes Matcher e Pattern.
+
+Minha solução não ficou nem de longe a melhor, mas funcionou, e toda a prática que tive solucionando esse desafio foi ótima, estou muito mais familiarizado com regex no Java e muito ansioso para melhorar o meu código!
