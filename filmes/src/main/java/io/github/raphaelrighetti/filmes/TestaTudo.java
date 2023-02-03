@@ -1,16 +1,15 @@
 package io.github.raphaelrighetti.filmes;
 
-import io.github.raphaelrighetti.filmes.regex.JsonMatcher;
+import io.github.raphaelrighetti.filmes.modelos.Catalogo;
 
 import java.io.*;
 import java.net.URI;
 import java.net.http.HttpClient;
 import java.net.http.HttpRequest;
 import java.net.http.HttpResponse;
-import java.util.List;
 import java.util.Properties;
 
-public class LeitorApi {
+public class TestaTudo {
 
     public static void main(String[] args) {
         Properties properties = new Properties();
@@ -28,14 +27,9 @@ public class LeitorApi {
         HttpClient client = HttpClient.newBuilder().build();
         try {
             HttpResponse<String> response = client.send(request, HttpResponse.BodyHandlers.ofString());
-            System.out.println(response.body());
-            JsonMatcher jsonMatcher = new JsonMatcher(response.body());
-            jsonMatcher.getFilmes().forEach(System.out::println);
-            List<String> ranks = jsonMatcher.getRanks();
-            for (int i = 0; i < ranks.size(); i++) {
-                System.out.println(ranks.get(i) + ", " + i);
-
-            }
+            Catalogo catalogo = new Catalogo(response.body());
+            catalogo.getFilmes().forEach(System.out::println);
+            System.out.println(catalogo.getFilmes().size());
         } catch (Exception e) {
             e.printStackTrace();
         }

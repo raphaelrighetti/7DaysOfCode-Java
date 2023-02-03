@@ -1,0 +1,13 @@
+Nesse desafio pude finalmente criar a classe "Filme" e remover as listas individuais com os valores extraídos da API. Também decidi melhorar um pouco o meu código e estou mais satisfeito com ele agora.
+
+Tive a oportunidade de aprender um pouco sobre Records, apesar de não ter usado, e quebrei a cabeça mudando as minhas expressões regulares.
+
+Reflexões feitas no desafio:
+
+Algumas reflexões: você acha que faz sentido ter setters ou um construtor padrão? Um filme deve ser interfaceado? Deve ser imutável? Justifique a sua decisão no seu repositório. 
+
+Respostas:
+
+1. Não vi sentido em colocar setters na classe "Filmes", pois os filmes não são algo em que a gente vai ficar mexendo, os filmes têm as informações deles e é isso. Único caso em que faria sentido uma mudança seria se o filme tivesse sido registrado com informações erradas.
+2. Não acho que um filme deve ser interfaceado, pois ele não precisa ter comportamentos específicos além dos getters e nem precisa ter uma ordem natural nesse caso, pois os filmes já são adicionados à lista por rank.
+3. O filme deve ser imutável, pois tanto título quanto imagem, ano e rank não vão mudar (não no meu projeto, pelo menos, se a ordem dos rankings mudarem ou algo do tipo, é dever da API atualizar).
