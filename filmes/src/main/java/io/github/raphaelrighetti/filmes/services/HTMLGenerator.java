@@ -19,12 +19,8 @@ public class HTMLGenerator {
                 <title>Filmes Show</title>
             </head>
             <body>
-                <main>
-                    <nav>
-                        <ul>
-                            %s
-                        </ul>
-                    </nav>
+                <main class="d-flex justify-content-around flex-wrap">
+                    %s
                 </main>
             </body>
             </html>
@@ -33,18 +29,14 @@ public class HTMLGenerator {
     public static void generate(List<Filme> filmes) {
         StringBuilder cards = new StringBuilder();
         String card = """
-                <li>
-                    <div class="card" style="width: 15rem;">
+                    <div class="card text-white bg-dark mb-3" style="width: 18rem;">
                         <h5 class="card-title">%s</h5>
                         <div class="card-body">
                             <img src="%s" class="card-img-top" alt="%s">
-                            <p class="card-text">Ano: %s</p>
-                            <p class="card-text">Nota: %s</p>
-                            <p class="card-text">Posição: %s</p>
+                            <p class="card-text mt-2">Ano: %s - Nota: %s</p>
+                            <p class="card-text">Rank: %s</p>
                         </div>
                     </div>
-                </li>
-                
                 """;
 
         filmes.forEach(item -> {
