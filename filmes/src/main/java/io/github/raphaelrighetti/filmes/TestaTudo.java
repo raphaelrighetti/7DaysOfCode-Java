@@ -1,6 +1,7 @@
 package io.github.raphaelrighetti.filmes;
 
 import io.github.raphaelrighetti.filmes.modelos.Catalogo;
+import io.github.raphaelrighetti.filmes.services.HTMLGenerator;
 
 import java.io.*;
 import java.net.URI;
@@ -25,12 +26,11 @@ public class TestaTudo {
                 .GET()
                 .build();
         HttpClient client = HttpClient.newBuilder().build();
-        try {
+        try (PrintWriter pw = new PrintWriter("index.html")) {
             HttpResponse<String> response = client.send(request, HttpResponse.BodyHandlers.ofString());
             Catalogo catalogo = new Catalogo(response.body());
-            catalogo.getFilmes().forEach(System.out::println);
-            System.out.println(catalogo.getFilmes().size());
-        } catch (Exception e) {
+            pw.write(HTMLGenerator.generate(catalogo.getFilmes()));
+        } catch (IOException | InterruptedException e) {
             e.printStackTrace();
         }
 
