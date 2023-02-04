@@ -45,6 +45,8 @@ O layout ficou bem feio e dá pra melhorar muito, mas foi uma experiência muito
 
 Ansioso para melhorar o projeto!
 
+![Screenshot da página](/img/page-screenshot.png)
+
 ## Dia 5
 
 ### Aplicando encapsulamento
