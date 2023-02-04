@@ -1,0 +1,3 @@
+Nesse desafio pude encapsular mais o meu código, criando uma classe separada responsável por executar a requisição HTTP à API e retornar o corpo da resposta, criando outra classe responsável por fazer o tratamento dos dados JSON em String e formar uma lista com os filmes, retornado-a em um método e passando a lógica de escrever/criar o arquivo HTML para a classe HTMLGenerator.
+
+Estou gostando de resolver os desafios e de como o projeto está evoluindo.
