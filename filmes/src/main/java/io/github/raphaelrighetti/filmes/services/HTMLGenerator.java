@@ -1,6 +1,6 @@
 package io.github.raphaelrighetti.filmes.services;
 
-import io.github.raphaelrighetti.filmes.modelos.Filme;
+import io.github.raphaelrighetti.filmes.interfaces.Content;
 
 import java.io.IOException;
 import java.io.PrintWriter;
@@ -8,7 +8,7 @@ import java.util.List;
 
 public class HTMLGenerator {
 
-    private static String html = """
+    private static final String html = """
             <!DOCTYPE html>
             <html lang="pt-br">
             <head>
@@ -26,7 +26,30 @@ public class HTMLGenerator {
             </html>
             """;
 
-    public static void generate(List<Filme> filmes) {
+    public static void generate(List<? extends Content> filmes) {
+        StringBuilder cards = new StringBuilder();
+        String card = """
+                    <div class="card text-white bg-dark mb-3" style="width: 18rem;">
+                        <h5 class="card-title">%s</h5>
+                        <div class="card-body">
+                            <img src="%s" class="card-img-top" alt="%s">
+                            <p class="card-text mt-2">Ano: %s</p>
+                        </div>
+                    </div>
+                """;
+
+        filmes.forEach(item -> {
+            cards.append(String.format(card, item.getNome(), item.getImagemUrl(), item.getNome(), item.getAno()));
+        });
+
+        try (PrintWriter pw = new PrintWriter("index.html")) {
+            pw.write(String.format(html, cards));
+        } catch (IOException e) {
+            e.printStackTrace();
+        }
+    }
+
+    public static void generateImdb(List<? extends Content> filmes) {
         StringBuilder cards = new StringBuilder();
         String card = """
                     <div class="card text-white bg-dark mb-3" style="width: 18rem;">

@@ -4,20 +4,16 @@ import io.github.raphaelrighetti.filmes.interfaces.Content;
 
 import java.time.Year;
 
-public class Filme implements Content {
+public class Quadrinho implements Content {
 
     private final String nome;
     private final String imagemUrl;
     private final Year ano;
-    private final double nota;
-    private final int rank;
 
-    public Filme(String nome, String imagemUrl, String ano, String nota, String rank) {
+    public Quadrinho(String nome, String imagemUrl, String ano) {
         this.nome = nome;
         this.imagemUrl = imagemUrl;
         this.ano = Year.parse(ano);
-        this.nota = Double.parseDouble(nota);
-        this.rank = Integer.parseInt(rank);
     }
 
     @Override
@@ -37,20 +33,18 @@ public class Filme implements Content {
 
     @Override
     public double getNota() {
-        return nota;
+        return 0;
     }
 
     @Override
     public int getRank() {
-        return rank;
+        return 0;
     }
 
     @Override
     public String toString() {
         return "[Nome: " + nome +
                 ", Imagem URL: " + imagemUrl +
-                ", Ano: " + ano +
-                ", Nota: " + nota +
-                ", Rank: " + rank + "]";
+                ", Ano: " + ano + "]";
     }
 }

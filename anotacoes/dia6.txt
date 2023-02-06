@@ -1,0 +1,6 @@
+
+Nesse desafio criei as interfaces "Content", "APIClient", "JsonParser" e "ListGenerator" com o objetivo de deixar o meu código mais genérico e funcionando com mais respostas JSON, não apenas da API de filmes do IMDB.
+
+Também criei várias classes novas, consumindo a API de séries do IMDB e a API de quadrinhos da Marvel (o onsaleDate tem umas datas muito distantes no futuro, não sei se errei em algo na chamada, mas achei que fazia mais sentido usar o onsaleDate em vez do focDate, pois alguns resultados não tinham informação de ano neles).
+
+Tive bastante dificuldade em consumir a API da Marvel e tratar os dados da resposta usando regex e métodos de String, com certeza seria mais fácil usando alguma biblioteca específica para tratar dados JSON, mas foi uma ótima prática e, sem dúvida, o desafio mais difícil até agora, tive que fazer em dois dias.

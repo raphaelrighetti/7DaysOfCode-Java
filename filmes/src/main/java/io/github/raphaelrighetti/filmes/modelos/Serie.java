@@ -4,7 +4,7 @@ import io.github.raphaelrighetti.filmes.interfaces.Content;
 
 import java.time.Year;
 
-public class Filme implements Content {
+public class Serie implements Content {
 
     private final String nome;
     private final String imagemUrl;
@@ -12,7 +12,7 @@ public class Filme implements Content {
     private final double nota;
     private final int rank;
 
-    public Filme(String nome, String imagemUrl, String ano, String nota, String rank) {
+    public Serie(String nome, String imagemUrl, String ano, String nota, String rank) {
         this.nome = nome;
         this.imagemUrl = imagemUrl;
         this.ano = Year.parse(ano);
