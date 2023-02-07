@@ -3,6 +3,15 @@
 
 Desafios propostos no 7DaysOfCode - Java da Alura.
 
+| :placard: Vitrine.Dev |     |
+| -------------  | --- |
+| :sparkles: Nome        | **7DaysOfCode-Java**
+| :label: Tecnologias | java (tecnologias utilizadas)
+| :rocket: URL         | https://github.com/raphaelrighetti/7DaysOfCode-Java
+| :fire: Desafio     | https://7daysofcode.io/matricula/java
+
+![Screenshot da página](/img/page-screenshot.png#vitrinedev)
+
 ## Dia 1
 
 ### Requisição à API
