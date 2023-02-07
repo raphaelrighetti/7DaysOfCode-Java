@@ -46,11 +46,21 @@ public class Serie implements Content {
     }
 
     @Override
+    public String type() {
+        return "Série";
+    }
+
+    @Override
     public String toString() {
         return "[Nome: " + nome +
                 ", Imagem URL: " + imagemUrl +
                 ", Ano: " + ano +
                 ", Nota: " + nota +
                 ", Rank: " + rank + "]";
+    }
+
+    @Override
+    public int compareTo(Content c) {
+        return Double.compare(c.getNota(), nota);
     }
 }

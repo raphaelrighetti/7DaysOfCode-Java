@@ -31,6 +31,7 @@ public class HTMLGenerator {
         String card = """
                     <div class="card text-white bg-dark mb-3" style="width: 18rem;">
                         <h5 class="card-title">%s</h5>
+                        <p class="font-italic font-weight-light text-white-50">%s</p>
                         <div class="card-body">
                             <img src="%s" class="card-img-top" alt="%s">
                             <p class="card-text mt-2">Ano: %s</p>
@@ -39,7 +40,7 @@ public class HTMLGenerator {
                 """;
 
         filmes.forEach(item -> {
-            cards.append(String.format(card, item.getNome(), item.getImagemUrl(), item.getNome(), item.getAno()));
+            cards.append(String.format(card, item.getNome(), item.type(), item.getImagemUrl(), item.getNome(), item.getAno()));
         });
 
         try (PrintWriter pw = new PrintWriter("index.html")) {
@@ -54,6 +55,7 @@ public class HTMLGenerator {
         String card = """
                     <div class="card text-white bg-dark mb-3" style="width: 18rem;">
                         <h5 class="card-title">%s</h5>
+                        <p class="font-italic font-weight-light text-white-50">%s</p>
                         <div class="card-body">
                             <img src="%s" class="card-img-top" alt="%s">
                             <p class="card-text mt-2">Ano: %s - Nota: %s</p>
@@ -63,7 +65,7 @@ public class HTMLGenerator {
                 """;
 
         filmes.forEach(item -> {
-            cards.append(String.format(card, item.getNome(), item.getImagemUrl(), item.getNome(), item.getAno(), item.getNota(), item.getRank()));
+            cards.append(String.format(card, item.getNome(), item.type(), item.getImagemUrl(), item.getNome(), item.getAno(), item.getNota(), item.getRank()));
         });
 
         try (PrintWriter pw = new PrintWriter("index.html")) {

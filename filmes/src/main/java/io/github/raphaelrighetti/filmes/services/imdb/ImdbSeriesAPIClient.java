@@ -30,6 +30,6 @@ public class ImdbSeriesAPIClient implements APIClient {
 
     @Override
     public String type() {
-        return "Serie";
+        return "Série";
     }
 }

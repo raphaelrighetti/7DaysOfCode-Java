@@ -54,3 +54,21 @@ Ansioso para melhorar o projeto!
 Nesse desafio pude encapsular mais o meu código, criando uma classe separada responsável por executar a requisição HTTP à API e retornar o corpo da resposta, criando outra classe responsável por fazer o tratamento dos dados JSON em String e formar uma lista com os filmes, retornado-a em um método e passando a lógica de escrever/criar o arquivo HTML para a classe HTMLGenerator.
 
 Estou gostando de resolver os desafios e de como o projeto está evoluindo.
+
+## Dia 6
+
+### Criando interfaces e consumindo API Marvel
+
+Nesse desafio criei as interfaces "Content", "APIClient", "JsonParser" e "ListGenerator" com o objetivo de deixar o meu código mais genérico e funcionando com mais respostas JSON, não apenas da API de filmes do IMDB.
+
+Também criei várias classes novas, consumindo a API de séries do IMDB e a API de quadrinhos da Marvel (o onsaleDate tem umas datas muito distantes no futuro, não sei se errei em algo na chamada, mas achei que fazia mais sentido usar o onsaleDate em vez do focDate, pois alguns resultados não tinham informação de ano neles).
+
+Tive bastante dificuldade em consumir a API da Marvel e tratar os dados da resposta usando regex e métodos de String, com certeza seria mais fácil usando alguma biblioteca específica para tratar dados JSON, mas foi uma ótima prática e, sem dúvida, o desafio mais difícil até agora, tive que fazer em dois dias.
+
+## Dia 7
+
+### Aplicando comparação
+
+Nesse desafio pude implementar a interface Comparable na minha interface Content, o que, no começo, não fazia muito sentido para mim, já que a API do IMDB já retornava os dados na ordem do top 250, mas que acabou fazendo muito sentido com um dos desafios extras desse desafio, que consistia em juntaras duas listas (séries e filmes) do IMDB e organizá-las por nota.
+
+Também pude alterar o HTML gerado para incluir um campo que específica o tipo do item (Filme, Série ou Quadrinho), assim podendo mostrar o tipo do item no HTML gerado a partir da lista dos filmes e séries juntos.

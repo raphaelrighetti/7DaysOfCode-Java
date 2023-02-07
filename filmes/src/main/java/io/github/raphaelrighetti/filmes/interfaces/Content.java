@@ -2,7 +2,7 @@ package io.github.raphaelrighetti.filmes.interfaces;
 
 import java.time.Year;
 
-public interface Content {
+public interface Content extends Comparable<Content> {
 
     String getNome();
 
@@ -13,4 +13,6 @@ public interface Content {
     double getNota();
 
     int getRank();
+
+    String type();
 }

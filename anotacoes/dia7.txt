@@ -1,0 +1,3 @@
+Nesse desafio pude implementar a interface Comparable na minha interface Content, o que, no começo, não fazia muito sentido para mim, já que a API do IMDB já retornava os dados na ordem do top 250, mas que acabou fazendo muito sentido com um dos desafios extras desse desafio, que consistia em juntaras duas listas (séries e filmes) do IMDB e organizá-las por nota.
+
+Também pude alterar o HTML gerado para incluir um campo que específica o tipo do item (Filme, Série ou Quadrinho), assim podendo mostrar o tipo do item no HTML gerado a partir da lista dos filmes e séries juntos.

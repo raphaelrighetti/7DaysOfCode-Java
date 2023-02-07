@@ -42,9 +42,19 @@ public class Quadrinho implements Content {
     }
 
     @Override
+    public String type() {
+        return "Quadrinho";
+    }
+
+    @Override
     public String toString() {
         return "[Nome: " + nome +
                 ", Imagem URL: " + imagemUrl +
                 ", Ano: " + ano + "]";
+    }
+
+    @Override
+    public int compareTo(Content c) {
+        return nome.compareTo(c.getNome());
     }
 }
